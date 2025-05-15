@@ -53,8 +53,8 @@ Certifique-se de ter o Java 17+ e Maven instalados.
 
 ```bash
 # Clone o projeto
-git clone https://github.com/usuario/projeto-estoque.git
-cd projeto-estoque
+git clone https://github.com/Moosy-Joao/Trabalho_OOP.git
+cd Trabalho_OOP
 
 # Execute o projeto
 ./mvnw spring-boot:run
