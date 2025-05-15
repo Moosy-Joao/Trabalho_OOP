@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.Entities.Produto;
+import com.example.demo.entities.Produto;
 import com.example.demo.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

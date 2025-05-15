@@ -25,7 +25,8 @@ public class Compra {
     public Compra() {
     }
 
-    public Compra(Long fornecedorId, Long produtoId, Integer quantidade, BigDecimal valorTotal, LocalDateTime dataCompra) {
+    public Compra(Long fornecedorId, Long produtoId, Integer quantidade, BigDecimal valorTotal,
+            LocalDateTime dataCompra) {
         this.fornecedorId = fornecedorId;
         this.produtoId = produtoId;
         this.quantidade = quantidade;

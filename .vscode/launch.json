@@ -1,21 +1,16 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
             "type": "java",
-            "name": "Current File",
             "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "DemoApplication",
-            "request": "launch",
-            "mainClass": "com.example.demo.DemoApplication",
-            "projectName": "demo"
+            "name": "Debug Projeto Java",
+            "mainClass": "com.example.demo.MainApplication",
+            "console": "integratedTerminal",
+            "vmArgs": "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
         }
     ]
 }
+
+// Run Debug //
+// mvn spring-boot:run -Dspring-boot.run.jvmArguments="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
