@@ -1,63 +1,92 @@
-﻿# Trabalho_OOP
+﻿# 📚 Seminário - Implementando API Spring Boot com Java
 
- # 🏗️ API - Sistema de Estoque de Materiais de Construção
+## 📌 Visão Geral
 
-Este projeto consiste em uma API RESTful desenvolvida com **Spring Boot e Java**, como parte de um seminário acadêmico. O objetivo é gerenciar um sistema de estoque para materiais de construção, incluindo funcionalidades como cadastro, consulta, atualização e remoção de dados relacionados aos produtos.
+Este repositório contém o projeto desenvolvido para o seminário acadêmico sobre a implementação de uma **API RESTful** utilizando **Spring Boot com Java**.  
+O principal objetivo é construir um sistema funcional, estruturado nas camadas de **entidades**, **serviços**, **repositórios** e **controllers**.
 
-## 👥 Integrantes do Grupo
+---
 
-- Matheus A
-- João P
-- João A
+## 📁 Estrutura do Projeto
 
-## 📌 Estrutura do Projeto
+Cada integrante do grupo será responsável pela implementação de uma **controller**, contemplando as seguintes camadas:
 
-Cada membro do grupo foi responsável pela implementação completa de uma *controller*, incluindo todas as camadas relacionadas:
+📦 entidade/
+⚙️ service/
+💾 repository/
+🌐 controller/
 
-- **Entidade (Entity)**
-- **Repositório (Repository)**
-- **Serviço (Service)**
-- **Controlador (Controller)**
+---
 
-## 📦 Camadas e Arquitetura
+## 🚀 Etapas de Entrega
 
-O projeto segue o padrão MVC (Model-View-Controller), com divisão clara de responsabilidades:
+A entrega será dividida em cinco etapas, com os seguintes pesos na avaliação:
 
+| Etapa                       | Peso     |
+| --------------------------- | -------- |
+| 📦 Entrega das Entidades    | 1,125 pt |
+| 💾 Entrega dos Repositórios | 1,125 pt |
+| ⚙️ Entrega das Services     | 1,125 pt |
+| 🌐 Entrega das Controllers  | 1,125 pt |
+| 🧑‍🏫 Apresentação da API      | 2,5 pt   |
 
-## ✅ Requisitos de Entrega
+---
 
-O desenvolvimento foi dividido em etapas:
+## 🗂 Organização Interna
 
-1. Entidades (Modelos e Mapeamento JPA)
-2. Repositórios (Interfaces de persistência)
-3. Services (Regras de negócio)
-4. Controllers (Endpoints da API)
-5. Apresentação final da API
+Cada grupo deverá entregar, neste repositório, um arquivo `responsabilidades.txt` detalhando **o que cada integrante irá desenvolver**.
 
-## 📋 Códigos de Resposta HTTP
+---
 
-- `200 OK` – Requisição bem-sucedida
-- `201 Created` – Recurso criado com sucesso
-- `400 Bad Request` – Erro nos dados enviados
-- `404 Not Found` – Recurso não encontrado
-- `409 Conflict` – Violação de regra de negócio
+## ✅ Códigos de Resposta HTTP
 
-## 📄 Classes Padrão de Resposta
+A API deverá seguir os seguintes **códigos de status HTTP**:
 
-- `ApiResponse.java`: Modelo de resposta padrão para sucesso
-- `ErrorResponse.java`: Modelo para tratamento e exibição de erros
+| Código | Significado                        |
+| ------ | ---------------------------------- |
+| 200    | OK – Requisição bem-sucedida       |
+| 201    | Created – Recurso criado           |
+| 400    | Bad Request – Dados inválidos      |
+| 404    | Not Found – Recurso não encontrado |
+| 409    | Conflict – Violação de regra       |
 
-## 🚀 Como Executar
+### 📄 Classes Padrão de Resposta
 
-Certifique-se de ter o Java 17+ e Maven instalados.
+- `ApiResponse.java` – Para respostas bem-sucedidas
+- `ErrorResponse.java` – Para erros e falhas de validação
 
-```bash
-# Clone o projeto
-git clone https://github.com/Moosy-Joao/Trabalho_OOP.git
-cd Trabalho_OOP
+---
 
-# Execute o projeto
-./mvnw spring-boot:run
-```
-## 📚 Licença
-Este projeto é parte de um trabalho acadêmico e está disponível sob a licença MIT.
+## 📂 Entrega e Avaliação
+
+✅ O projeto será entregue **neste repositório público** do GitHub, permitindo que o professor acompanhe:
+
+- O progresso de desenvolvimento
+- A contribuição individual de cada integrante
+- A organização e estrutura do código
+
+---
+
+## ⚠️ Penalidade
+
+A **não entrega** de qualquer um dos componentes impactará **todo o grupo**, podendo resultar em **redução de até 25% da nota final**.
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+- Java 17+
+- Spring Boot
+- Spring Data JPA
+- Maven
+- H2 / PostgreSQL
+
+---
+
+## 👨‍💻 Contribuidores
+
+- João Pedro Pereira Marques
+- Matheus Alende Pires
+- João Antonio de Souza
+
+---
