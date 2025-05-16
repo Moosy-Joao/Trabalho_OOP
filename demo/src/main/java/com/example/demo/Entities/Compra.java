@@ -1,11 +1,22 @@
 package com.example.demo.Entities;
 
-import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
 @Table(name = "compras")
+@Getter @Setter
+@NoArgsConstructor @AllArgsConstructor
 public class Compra {
 
     @Id
@@ -22,63 +33,4 @@ public class Compra {
 
     private LocalDateTime dataCompra;
 
-    public Compra() {
-    }
-
-    public Compra(Long fornecedorId, Long produtoId, Integer quantidade, BigDecimal valorTotal,
-            LocalDateTime dataCompra) {
-        this.fornecedorId = fornecedorId;
-        this.produtoId = produtoId;
-        this.quantidade = quantidade;
-        this.valorTotal = valorTotal;
-        this.dataCompra = dataCompra;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getFornecedorId() {
-        return fornecedorId;
-    }
-
-    public void setFornecedorId(Long fornecedorId) {
-        this.fornecedorId = fornecedorId;
-    }
-
-    public Long getProdutoId() {
-        return produtoId;
-    }
-
-    public void setProdutoId(Long produtoId) {
-        this.produtoId = produtoId;
-    }
-
-    public Integer getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public BigDecimal getValorTotal() {
-        return valorTotal;
-    }
-
-    public void setValorTotal(BigDecimal valorTotal) {
-        this.valorTotal = valorTotal;
-    }
-
-    public LocalDateTime getDataCompra() {
-        return dataCompra;
-    }
-
-    public void setDataCompra(LocalDateTime dataCompra) {
-        this.dataCompra = dataCompra;
-    }
 }

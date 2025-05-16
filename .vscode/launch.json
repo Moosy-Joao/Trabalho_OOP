@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DemoApplication",
+            "request": "launch",
+            "mainClass": "com.example.demo.DemoApplication",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
             "request": "launch",
             "name": "Debug Projeto Java",
             "mainClass": "com.example.demo.MainApplication",
