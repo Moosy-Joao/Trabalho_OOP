@@ -1,42 +1,46 @@
-// package com.example.demo.service;
+package com.example.demo.service;
 
-// import com.example.demo.entities.Produto;
-// import com.example.demo.repository.IProdutoRepository;
-// import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Optional;
 
-// import java.util.Optional;
+import org.springframework.stereotype.Service;
 
-// @Service
-// public class ProdutoService {
+import com.example.demo.Entities.Produto;
+import com.example.demo.repository.IProdutoRepository;
 
-//     @Autowired
-//     private IProdutoRepository produtoRepository;
+@Service
+public class ProdutoService {
 
-//     public Produto adicionarProduto(Produto produto) {
-//         return produtoRepository.save(produto);
-//     }
+    private final IProdutoRepository produtoRepository;
 
-//     public Optional<Produto> buscarProdutoPorId(Long id) {
-//         return produtoRepository.findById(id);
-//     }
+    public ProdutoService(IProdutoRepository produtoRepository) {
+        this.produtoRepository = produtoRepository;
+    }
 
-//     public boolean verificarEstoqueDisponivel(Long produtoId, int quantidade) {
-//         Optional<Produto> produtoOpt = produtoRepository.findById(produtoId);
-//         if (produtoOpt.isPresent()) {
-//             Produto produto = produtoOpt.get();
-//             return produto.getQuantidade() != null && produto.getQuantidade() >= quantidade;
-//         }
-//         return false;
-//     }
+    public Produto createProduto(Produto produto) {
+        return produtoRepository.save(produto);
+    }
 
-//     public Produto atualizarQuantidade(Long produtoId, int novaQuantidade) {
-//         Optional<Produto> produtoOpt = produtoRepository.findById(produtoId);
-//         if (produtoOpt.isPresent()) {
-//             Produto produto = produtoOpt.get();
-//             produto.setQuantidade(novaQuantidade);
-//             return produtoRepository.save(produto);
-//         }
-//         return null;
-//     }
-// }
+    public List<Produto> getAllProdutos() {
+        return produtoRepository.findAll();
+    }
+
+    public Optional<Produto> getProdutoById(Long id) {
+        return produtoRepository.findById(id);
+    }
+
+    public Produto updateProduto(Long id, Produto produtoDetails) {
+        return produtoRepository.findById(id).map(produto -> {
+            produto.setNome(produtoDetails.getNome());
+            produto.setDescricao(produtoDetails.getDescricao());
+            produto.setQuantidade(produtoDetails.getQuantidade());
+            produto.setPrecoUnitario(produtoDetails.getPrecoUnitario());
+            produto.setCategoriaId(produtoDetails.getCategoriaId());
+            return produtoRepository.save(produto);
+        }).orElseThrow(() -> new RuntimeException("Produto not found with id " + id));
+    }
+
+    public void deleteProduto(Long id) {
+        produtoRepository.deleteById(id);
+    }
+}
