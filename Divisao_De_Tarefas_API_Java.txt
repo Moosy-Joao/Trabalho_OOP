@@ -1,0 +1,26 @@
+Trabalho de Desenvolvimento de API em Java
+Divisão de Responsabilidades – Etapas 1 e 2
+
+Este documento descreve a divisão de responsabilidades entre os membros da equipe no desenvolvimento de uma API utilizando a linguagem Java. Cada integrante ficou responsável por criar entidades, repositórios, serviços e controladoras (controllers) relacionados a partes específicas do sistema.
+
+Parte 1 – Modelagem de Entidades e Repositórios
+
+- Matheus Alende
+  Responsável pelas entidades Fornecedor e Produto.
+
+- João Pedro
+  Responsável pelas entidades Categoria e Venda.
+
+- João Antonio
+  Responsável pela entidade Compra.
+
+Parte 2 – Serviços e Controladoras (Camadas de Negócio e API)
+
+- Matheus Alende
+  Responsável pelos serviços e controladoras das entidades Fornecedor e Produto.
+
+- João Pedro
+  Responsável pelos serviços e controladoras das entidades Categoria e Venda.
+
+- João Antonio
+  Responsável pelos serviços e controladoras da entidade Compra.
